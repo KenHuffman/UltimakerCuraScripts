@@ -37,7 +37,7 @@ Finally close the dialog.
 - The file should have a `.py` extension when you save it, _not_ `.py.txt`. If you are not sure, you can right-click on the downloaded file and view its Properties which will show its extension.
 - Make sure the thumbnail size on the `Post Processing Plugin` is 200x200.
 - If you have other plugins that modify g-code, you might try removing them (at least temporarily). The Creality firmware is very picky about where the image is placed in the gcode file and multiple plugins may move the embedded image.
-- Start `Ultimaker-Cura.exe` with the `--debug` flag and see if it complains as it load the scripts. Currently this only possible from a bash window, which is not part of standard Windows.
+- Check the `cura.log` file in Cura's installation directory. Search for `Begin loading of script: CreateV2NeoThumbnail`
 - Look at the gcode file generated, the **first** should be a line should look like (the numbers may be different):
 
   `; jpg begin 200*200 3486 3 197 500`
