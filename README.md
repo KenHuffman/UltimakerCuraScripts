@@ -33,7 +33,8 @@ Finally close the dialog.
 
 # Troubleshooting
 
-- Make sure you are running Cura 5.
+- This works with firmware that ships with the Ender-3 V2 Neo. Custom firmware may require a different script to generate the image.
+- Make sure you are running Cura 5. This does not work with older Cura versions or the Prusa/Super slicer.
 - The file should have a `.py` extension when you save it, _not_ `.py.txt`. If you are not sure, you can right-click on the downloaded file and view its Properties which will show its extension.
 - Make sure the thumbnail size on the `Post Processing Plugin` is 200x200.
 - If you have other plugins that modify g-code, you might try removing them (at least temporarily). The Creality firmware is very picky about where the image is placed in the gcode file and multiple plugins may move the embedded image.
