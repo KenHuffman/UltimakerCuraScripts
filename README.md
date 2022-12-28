@@ -11,7 +11,7 @@ This script works with the **Ender-3 V2 Neo**, but it may work with other printe
 ## Determine where the script belongs
 
 Start Cura and choose the `Help -> Show Configuration Folder` menu.
-This menu item will launch a file browser showing a directory that has a `script` subdirectory.
+This menu item will launch a file browser showing a directory that has a `scripts` subdirectory.
 
 Note the location of the `scripts` directory. The directory path will vary based on your windows user id and the version of Cura that you are running. As an example, for me the path is `C:\Users\huffm\AppData\Roaming\cura\5.2\scripts`.
 
@@ -27,7 +27,12 @@ Download the script from [here](https://raw.githubusercontent.com/KenHuffman/Ult
 
 Launch Cura again, and choose `Extensions -> Post Processing -> Modify G-Code`
 
-On the `Post Processing Plugin` dialog, select the `Add a script` button. From the pop up a list of available plugins, select `Create V2Neo Thumbnail`. On the right half of that dialog, specify `200` for both the `Width` and `Height` values.
+On the `Post Processing Plugin` dialog, select the `Add a script` button. From the pop up a list of available plugins, select `Create V2Neo Thumbnail`. On the right half of that dialog:
+- `Width`: `200`
+- `Height`: `200`
+- `Quality`: `-1`
+
+The quality value determines the quality of the image rendered with a range of 0 to 100, with 0 being the poorest and 100 being the best. A value of -1 will use the default quality.
 
 Finally close the dialog.
 

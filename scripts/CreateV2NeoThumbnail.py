@@ -25,14 +25,14 @@ class CreateV2NeoThumbnail(Script):
         except Exception:
             Logger.logException("w", "Failed to create snapshot image")
 
-    def _encodeSnapshot(self, snapshot):
+    def _encodeSnapshot(self, snapshot, quality):
 
         Logger.log("d", "Encoding thumbnail image...")
         try:
             thumbnail_buffer = QBuffer()
             thumbnail_buffer.open(QBuffer.OpenModeFlag.ReadWrite)
             thumbnail_image = snapshot
-            thumbnail_image.save(thumbnail_buffer, "JPG")
+            thumbnail_image.save(thumbnail_buffer, "JPG", quality=quality)
             thumbnail_data = thumbnail_buffer.data()
             thumbnail_length = thumbnail_data.length()
             base64_bytes = base64.b64encode(thumbnail_data)
@@ -90,6 +90,17 @@ class CreateV2NeoThumbnail(Script):
                     "minimum_value": "0",
                     "minimum_value_warning": "12",
                     "maximum_value_warning": "600"
+                },
+                "quality":
+                {
+                    "label": "Quality",
+                    "description": "1 (poor) - 100 (best), -1 (default)",
+                    "type": "int",
+                    "default_value": -1,
+                    "minimum_value": "-1",
+                    "maximum_value": "100",
+                    "minimum_value_warning": "-1",
+                    "maximum_value_warning": "100"
                 }
             }
         }"""
@@ -97,10 +108,11 @@ class CreateV2NeoThumbnail(Script):
     def execute(self, data):
         width = self.getSettingValueByKey("width")
         height = self.getSettingValueByKey("height")
+        quality = self.getSettingValueByKey("quality")
 
         snapshot = self._createSnapshot(width, height)
         if snapshot:
-            (encoded_snapshot, thumbnail_length) = self._encodeSnapshot(snapshot)
+            (encoded_snapshot, thumbnail_length) = self._encodeSnapshot(snapshot, quality)
             snapshot_gcode = self._convertSnapshotToGcode(
                 thumbnail_length, encoded_snapshot, width, height)
 
