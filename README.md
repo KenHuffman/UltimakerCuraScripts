@@ -4,14 +4,17 @@ Many 3D printers have firmware that supports displaying an image embedded in gco
 
 This script works with the **Ender-3 V2 Neo**, but it may work with other printer models. If it works with your printer, send me a message and I will document it here so others will be aware.
 
-**Note**: This script _only_ works with the Cura slicer version 5 or newer.
+**Note**: This script _only_ works with the **Cura** slicer version 5 or newer.
 
 # Installation Steps
 
 ## Determine where the script belongs
 
 Start Cura and choose the `Help -> Show Configuration Folder` menu.
-This menu item will launch a file browser showing a directory that has a `script` subdirectory.
+
+![Show Configuration Folder](doc/ShowConfig.png)
+
+This menu item will launch a file browser showing a directory that has a `scripts` subdirectory.
 
 Note the location of the `scripts` directory. The directory path will vary based on your windows user id and the version of Cura that you are running. As an example, for me the path is `C:\Users\huffm\AppData\Roaming\cura\5.2\scripts`.
 
@@ -27,9 +30,27 @@ Download the script from [here](https://raw.githubusercontent.com/KenHuffman/Ult
 
 Launch Cura again, and choose `Extensions -> Post Processing -> Modify G-Code`
 
-On the `Post Processing Plugin` dialog, select the `Add a script` button. From the pop up a list of available plugins, select `Create V2Neo Thumbnail`. On the right half of that dialog, specify `200` for both the `Width` and `Height` values.
+![Modify G-Code](doc/ModifyGCode.png)
+
+On the `Post Processing Plugin` dialog, select the `Add a script` button.
+
+![Add a script](doc/AddAScript.png)
+
+From the pop up a list of available plugins, select `Create V2Neo Thumbnail`. On the right half of that dialog, specify `200` for both the `Width` and `Height` values.
+
+![Thumbnail Plugin](doc/ThumbnailParam.png)
 
 Finally close the dialog.
+
+## Slice your
+
+Slice your object and save to SD card.
+
+![Slice](doc/ThingIso.png)
+
+Then print from your printer's user interface
+
+![Print](doc/NeoDisplay.jpg)
 
 # Troubleshooting
 
