@@ -42,3 +42,9 @@ Finally close the dialog.
 - Look at the gcode file generated, the **first** should be a line should look like (the numbers may be different):
 
   `; jpg begin 200*200 3486 3 197 500`
+
+# Octoprint
+
+If you use OctoPrint you can use the https://github.com/jneilliii/OctoPrint-PrusaSlicerThumbnails plugin to display these embedded images. As of version 1.0.2, that OctoPrint plugin supports this Creality Ender-3 V2 Neo format.
+
+At the moment 1.0.1 is still the stable release, but if you go to **OctoPrint Settings -> Software Update -> Slicer Thumbnails -> Release Channel** and select **Release Candidate** you get the latest version with this functionality.
