@@ -42,7 +42,7 @@ From the pop up a list of available plugins, select `Create V2Neo Thumbnail`. On
 
 Finally close the dialog.
 
-## Slice your
+## Splice as you normally would
 
 Slice your object and save to SD card.
 
