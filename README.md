@@ -66,6 +66,6 @@ Then print from your printer's user interface
 
 # Octoprint
 
-If you use OctoPrint you can use the https://github.com/jneilliii/OctoPrint-PrusaSlicerThumbnails plugin to display these embedded images. As of version 1.0.2, that OctoPrint plugin supports this Creality Ender-3 V2 Neo format.
+If you use [OctoPrint](https://octoprint.org/) you can use the [Slicer Thumbnails](https://github.com/jneilliii/OctoPrint-PrusaSlicerThumbnails) plugin to display these embedded images as well.
 
-At the moment 1.0.1 is still the stable release, but if you go to **OctoPrint Settings -> Software Update -> Slicer Thumbnails -> Release Channel** and select **Release Candidate** you get the latest version with this functionality.
+![OctoPrint](doc/OctoThumb.png)
