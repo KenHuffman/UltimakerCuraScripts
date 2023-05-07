@@ -4,7 +4,7 @@ Many 3D printers have firmware that supports displaying an image embedded in gco
 
 This script works with the **Ender-3 V2 Neo**, but it may work with other printer models. If it works with your printer, send me a message and I will document it here so others will be aware.
 
-**Note**: This script _only_ works with the **Cura** slicer version 5 or newer.
+**Note**: This script _only_ works with the **Cura** and **Creality** slicers version 4 or newer.
 
 # Installation Steps
 
@@ -55,8 +55,8 @@ Then print from your printer's user interface
 # Troubleshooting
 
 - This works with firmware that ships with the Ender-3 V2 Neo. Custom firmware may require a different script to generate the image.
-- Make sure you are running Cura 5. This does not work with older Cura versions or the Prusa/Super slicer.
-- The file should have a `.py` extension when you save it, _not_ `.py.txt`. If you are not sure, you can right-click on the downloaded file and view its Properties which will show its extension.
+- Make sure you are running the Cura or Creality slicer. This does not work with the Prusa/Super slicer.
+- The file in the `scripts` directory should have a `.py` extension when you save it, _not_ `.py.txt`. If you are not sure, you can right-click on the downloaded file and view its Properties which will show its extension.
 - Make sure the thumbnail size on the `Post Processing Plugin` is 200x200.
 - If you have other plugins that modify g-code, you might try removing them (at least temporarily). The Creality firmware is very picky about where the image is placed in the gcode file and multiple plugins may move the embedded image.
 - Check the `cura.log` file in Cura's installation directory. Search for `Begin loading of script: CreateV2NeoThumbnail`
