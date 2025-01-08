@@ -1,3 +1,5 @@
+**This is no longer maintained as I no longer own an Ender 3. See [this fork by coco2299](https://github.com/coco2299/UltimakerCuraEnder3V2NeoThumbnailScript) for a newer version.**
+
 # Generating gcode preview for Ender-3 V2 Neo
 
 Many 3D printers have firmware that supports displaying an image embedded in gcode files. Unfortunately there isn't a standard format for these embedded images. Different printer models expect different image formats within gcode files. Because of this, there are a handful of scripts that generate these embedded images.
